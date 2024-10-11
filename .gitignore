@@ -1,0 +1,6 @@
+setup/
+__pycache__/
+*.pyc
+*.pyo
+*.log
+*.db
