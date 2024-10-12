@@ -41,12 +41,11 @@ def product_sender(chat_id, title, href, img_src, price):
 def search_for_updates(chat_id, url): #выдает апдейты если есть
     chrome_options = Options()
     chrome_options.add_argument(f'user-agent={user_agent}')
-    # chrome_options.add_argument('--headless')  # Запуск в безголовом режиме
+    chrome_options.add_argument('--headless')  # Запуск в безголовом режиме
     chrome_options.add_argument('--no-sandbox')
     chrome_options.add_argument('--disable-dev-shm-usage')
     driver = webdriver.Chrome(options=chrome_options)
-    driver.set_window_size(800, 600)
-    driver.set_window_position(-2000, 0) 
+
     driver.get(url)
     
 
